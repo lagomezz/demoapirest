@@ -1,9 +1,26 @@
 package com.bolsadeideas.spring.boot.bakend.apirest.models.entyty;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Cliente {
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
+// se crea annotaciones para la creacion de ñla tabla clientes 
+@Entity
+@Table(name="clientes")
+public class Cliente  implements Serializable{
+
+	// anotacion para la generacion de la llave primario en la tabla de clientes 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	public String getNombre() {
@@ -41,6 +58,9 @@ public class Cliente {
 	private String nombre;
 	private String apellido;
 	private String email;
+	
+	@Column(name="creacion")
+	@Temporal(TemporalType.DATE)
 	private Date Creacion;
 
 	public Long getId() {
@@ -50,5 +70,6 @@ public class Cliente {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+// se crea valor serializable debido a que se implemoento Serializable para la parte de 
+	private static final long serialVersionUID = 1L;
 }
