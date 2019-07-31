@@ -3,7 +3,7 @@ package com.bolsadeideas.spring.boot.bakend.apirest.models.entyty;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.annotation.Generated;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,10 +19,11 @@ import javax.persistence.TemporalType;
 public class Cliente  implements Serializable{
 
 	// anotacion para la generacion de la llave primario en la tabla de clientes 
+	// con la notacion IDENTITY es para generar llaves auto incrementables 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
+ // Get and Set para las propiedades 
 	public String getNombre() {
 		return nombre;
 	}
