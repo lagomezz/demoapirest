@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bolsadeideas.springboot.backend.apirest.models.entity.Cliente;
 import com.bolsadeideas.springboot.backend.apirest.models.services.IClienteService;
 
-@CrossOrigin(origins = { "http://localhost:4200" })
+
 @RestController
 @RequestMapping("/api")
 public class ClienteRestController {
@@ -61,5 +61,6 @@ public class ClienteRestController {
 	public void delete(@PathVariable Long id) {
 		Cliente currentCliente = this.clienteService.findById(id);
 		this.clienteService.delete(currentCliente);
+		System.out.print("ya se elimino el registro con el "+ id);
 	}
 }

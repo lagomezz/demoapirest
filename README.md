@@ -17,8 +17,7 @@ El siguente codigo se crea un CRUD utilizando JPA y como base de datos H2 con pr
   * {
     "nombre": "Elizabeth",
     "apellido": "Jimenez",
-    "email": "Elizabeth.Jimenez@bbva.com"  
-  }
+    "email": "Elizabeth.Jimenez@bbva.com" }
   
 [PUT] http://localhost:8080/api/clientes/{id}
   * Ejemplo de JSON para hacer la modificación del archivo.
