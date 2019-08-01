@@ -1,6 +1,32 @@
 # Se crea una api REST 
 El siguente codigo se crea un CRUD utilizando JPA y como base de datos H2 con presistencia de datos, se anexa documentación
 
+ ## Ligas para probar el servicio Rest 
+
+[GET] http://localhost:8080/api/clientes
+ * Hace una búsqueda en general de los elementos de la tabla clientes
+ 
+[GET] http://localhost:8080/api/clientes/{id}
+ * Hace una búsqueda en específico buscando por id del elemento 
+ 
+[DELETE] http://localhost:8080/api/clientes/{id}
+ * Borra un recurso de la base de datos solicitando el id.
+ 
+[POST] http://localhost:8080/api/clientes
+ * Ejemplo de JSON para hacer la inserción de un nuevo recurso. NOTA no es necesario colocar id ni fecha de creación debido a que esta las genera de manera automática.
+  * {
+    "nombre": "Elizabeth",
+    "apellido": "Jimenez",
+    "email": "Elizabeth.Jimenez@bbva.com"  
+  }
+  
+[PUT] http://localhost:8080/api/clientes/{id}
+  * Ejemplo de JSON para hacer la modificación del archivo.
+   * {
+    "nombre": "pereganito",
+    "apellido": "sanchez",
+    "email": "perenganito.sanchez@gmail.com" }
+
 # Getting Started
 
 ### Reference Documentation
